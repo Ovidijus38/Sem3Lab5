@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class TestBankAccount {
+public class TestBankAccount2 {
     public static void main(String[] args) {
 
         String output ="";
