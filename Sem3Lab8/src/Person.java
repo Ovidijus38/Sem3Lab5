@@ -7,7 +7,7 @@ public class Person {
     private String address;
     private GregorianCalendar dateOfBirth;
 
-    private Person()
+    public Person()
     {
         this("No name specified","No address specified",null);
     }
