@@ -7,7 +7,7 @@ public class TestPerson {
 
         String text;
 
-        text = "Calling the Person() constructor....";
+        text = "\n\nCalling the Person() constructor....";
         Person person1 = new Person();
         text += "\nValue of the first Person object is: " + person1;
 
@@ -24,18 +24,18 @@ public class TestPerson {
         GregorianCalendar birthDate = new GregorianCalendar(year,month,day);
 
         Person person2 = new Person(name,address,birthDate);
-        text += "\nValue of second person object is: " + person2;
+        text += "\nValue of second person object is: " + "\n" + person2;
 
-        text += "Calling the Student() constructor...";
+        text += "\n\nCalling the Student() constructor...";
         Student student1 = new Student();
 
-        text += "\nValue of the first Student object is: " + student1;
+        text += "\nValue of the first Student object is: " + "\n" + student1;
 
         text += "\n\nCalling the Student(String,String,GregorianCalendar,int,String)constructor using hard coded values...";
 
         Student student2 = new Student("Mike","Ballybunion",new GregorianCalendar(1996,4,12),425362,"Computing");
 
-        text += "\nValue of the second Student object is: " + student2;
+        text += "\nValue of the second Student object is: " + "\n" + student2;
 
         JOptionPane.showMessageDialog(null,"Class Tester\n\n" + text,"",JOptionPane.INFORMATION_MESSAGE);
 
