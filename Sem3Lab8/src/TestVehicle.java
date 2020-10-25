@@ -1,4 +1,4 @@
-import java.util.Arrays;
+
 
 public class TestVehicle {
     public static void main(String[] args) {
@@ -8,7 +8,7 @@ public class TestVehicle {
         System.out.println(car1);
 
         System.out.println("\n\nTesting the car multi-arg constructor: ");
-        Car car2 = new Car(10000,4.5,1.25,2000,"Ferrari","F2",2,"05KY1");
+        Car car2 = new Car(10000,4.5,1.25,2000,"Ferrari","F2",2,"05-KY-1");
         System.out.println(car2);
 
         System.out.println("\n\nTesting the bicycle no-arg constructor: ");

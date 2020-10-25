@@ -1,7 +1,3 @@
-//Car.java
-/*An instantiable class that inherits from the Vehicle class and adds a few
-of its own customisations*/
-
 
 public class Car extends Vehicle {
     private int maxPassengers;

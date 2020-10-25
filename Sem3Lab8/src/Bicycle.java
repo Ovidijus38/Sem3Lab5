@@ -2,43 +2,43 @@ public class Bicycle extends Vehicle {
     private boolean hasABell;
     private int gearCount;
 
-    public Bicycle()
-    {
+    public Bicycle() {
         setHasABell(false);
         setGearCount(0);
     }
-    public Bicycle(double price, double length, double height, double weight, String manufacturer, String model, boolean hasABell,int gearCount)
-    {
-        super(price, length, height, weight, manufacturer, model);
-        setHasABell(hasABell);
-        setGearCount(gearCount);
+
+    public Bicycle(double pr, double len, double hgt, double wgt, String mft, String mod, boolean bell, int gears) {
+        super(pr,len,hgt,wgt,mft,mod);
+        setHasABell(bell);
+        setGearCount(gears);
     }
 
-    public boolean isHasABell() {
+    public void setHasABell(boolean bell) {
+        hasABell=bell;
+    }
+
+    private void setGearCount(int gears) {
+        gearCount=gears;
+    }
+
+
+    public boolean getHasABell() {
         return hasABell;
     }
 
-    public void setHasABell(boolean hasABell) {
-        hasABell = hasABell;
-    }
-
-    public int getGearCount() {
+    private int getGearCount() {
         return gearCount;
     }
 
-    public void setGearCount(int gearCount) {
-        gearCount = gearCount;
-    }
-    public String toString()
-    {
+    public String toString() {
         String str = super.toString() + "\nHas bell: ";
 
-        if(isHasABell())
-            str += "Yes";
+        if(getHasABell())
+            str+="Yes";
         else
-            str += "No";
+            str+="No";
 
-        str += "\nGear Count: " + getGearCount();
+        str+="\nGear Count: " + getGearCount();
 
         return str;
     }
