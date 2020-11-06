@@ -21,7 +21,7 @@ public class Institute {
         return departments;
     }
 
-    public void setDepartment(Department department[]) {
+    public void setDepartment(Department[] department) {
         this.departments = department;
     }
 

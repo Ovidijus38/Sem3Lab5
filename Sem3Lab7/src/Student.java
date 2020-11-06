@@ -11,7 +11,8 @@ public class Student {
         setDepartment(department);
     }
 
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 

@@ -1,9 +1,9 @@
 public class Department {
 
     private String name;
-    private Student students[];
+    private Student[] students;
 
-    public Department(String name, Student students[])
+    public Department(String name, Student[] students)
     {
         setName(name);
         setStudents(students);

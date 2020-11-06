@@ -1,15 +1,13 @@
 public class TestAnimal {
     public static void main(String[] args) {
 
-
-
-        Animal allAnimals[] = new Animal[10];
+        Animal[] allAnimals = new Animal[10];
 
         System.out.println("Calling the no-argument constructor to create the first animal....");
         Animal animal1 = new Animal(); //tests no-arg constructor
         System.out.println("Details of first animal are:\n\n" + animal1);
 
-        String lionContinents[] = {"Africa","Asia"}; //initialise an array of strings
+        String[] lionContinents = {"Africa","Asia"}; //initialise an array of strings
 
         //tests 4-arg constructor and the 4 mutator methods
         System.out.println("\nCalling the 4-argument constructor to create a lion object....");

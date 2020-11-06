@@ -56,7 +56,6 @@
          updateMaxMinTemp(currentTemp);
      }
 
-
      private void updateMaxMinTemp(int currentTemp)
      {
         if(currentTemp > maximumTemp)

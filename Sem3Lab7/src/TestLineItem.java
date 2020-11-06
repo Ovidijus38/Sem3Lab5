@@ -1,7 +1,7 @@
 public class TestLineItem {
     public static void main(String[] args) {
 
-        LineItem allLineItems[] = new LineItem[10];
+        LineItem[] allLineItems = new LineItem[10];
 
         Product p1 = new Product("Pen","This is red pen");
         Product p2 = new Product("Pencil","This is a pencil");

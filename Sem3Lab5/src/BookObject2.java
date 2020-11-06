@@ -1,27 +1,22 @@
 public class BookObject2 {
 
     private String title;
-    private String ISBN;
     private double price;
+    private String ISBN;
     private int pages;
 
     public BookObject2()
     {
-        title = "Not Available";
-        ISBN = "Not Available";
-        price = 0.0;
-        pages = 0;
+        this.title = "Not Available";
+        this.price = 0.0;
+        this.ISBN = "Not Available";
+        this.pages = 0;
     }
-    public BookObject2(String title, String ISBN, double price, int pages)
+    public BookObject2(String title, double price, String ISBN, int pages)
     {
-        /*this.title = title;
-        this.ISBN = ISBN;
-        this.price = price;
-        this.pages = pages;*/
-
         setTitle(title);
-        setISBN(ISBN);
         setPrice(price);
+        setISBN(ISBN);
         setPages(pages);
     }
 

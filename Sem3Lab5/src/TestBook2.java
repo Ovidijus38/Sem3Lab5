@@ -1,35 +1,44 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class TestBook2 {
     public static void main(String[] args) {
+        String title, ISBN, output = "";
+        double price;
+        int pages;
 
-        String output = "";
+        JTextArea textArea = new JTextArea();
+        Font font = new Font("monospaced",Font.PLAIN,12);
+        textArea.setFont(font);
 
-        Thermometer term1 = new Thermometer(35);
-
-        output += "Calling the single - argument constructor ... setting the temperatures of the first thermometer to 35C " +
-                "\n First thermometer : \n" +
-                term1.toString();
-
-        Thermometer term2 = new Thermometer();
-
-        output += "\n\nCalling the no - argument constructor ...  setting the temperature of second thermometer to 0C" +
-                "\n Second thermometer: \n" +
-                term2.toString();
-
-        int temperature = Integer.parseInt(JOptionPane.showInputDialog("Please enter the temperature:"));
+        textArea.setText(String.format("%-25s%-9s%-25s%s","Title","Price","ISBN","Pages"));
 
 
-        term1.setTemperature(temperature);
+        title = JOptionPane.showInputDialog("Please enter the title of your favourite book");
+        price = Double.parseDouble(JOptionPane.showInputDialog("Please enter the price of your favourite book"));
+        ISBN = JOptionPane.showInputDialog("Please enter the ISBN of your favourite book");
+        pages = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number of pages in your favourite book"));
 
-        output += "\n\nCalling setTemperature() - setting the temperature of the second thermometer to 25C " +
-                "\nSecond thermometer : \n" +
-                term1.toString();
+        BookObject2 favouriteBook = new BookObject2(title,price,ISBN,pages);
 
-        JOptionPane.showMessageDialog(null,output,"***** Temperature Testing *****",JOptionPane.INFORMATION_MESSAGE);
+        output += String.format("\n\n%-25s%-9.2f%-25s%d",favouriteBook.getTitle(),favouriteBook.getPrice(),
+                favouriteBook.getISBN(),favouriteBook.getPages());
 
+        title = JOptionPane.showInputDialog("Please enter the title of your least favourite book");
+        price = Double.parseDouble(JOptionPane.showInputDialog("Please enter the price of your least favourite book"));
+        ISBN = JOptionPane.showInputDialog("Please enter the ISBN of your least favourite book");
+        pages = Integer.parseInt(JOptionPane.showInputDialog("Please enter the number of pages in your least favourite book"));
+
+        BookObject2 leastFavouriteBook = new BookObject2(title,price,ISBN,pages);
+
+        output += String.format("\n\n%-25s%-9.2f%-25s%d",leastFavouriteBook.getTitle(),leastFavouriteBook.getPrice(),
+                leastFavouriteBook.getISBN(),leastFavouriteBook.getPages());
+
+        textArea.append(output);
+
+        JOptionPane.showMessageDialog(null,textArea,"Book Object Data",
+                JOptionPane.INFORMATION_MESSAGE);
 
         System.exit(0);
     }
 }
-

@@ -10,7 +10,6 @@
     public BankAccount()
     {
         owner = "Owner not available";
-        //number = 0;
         interestRate = 0;
         incrementCount();
         setNumber(totalAcc);
@@ -18,7 +17,6 @@
     public BankAccount(String owner,double interestRate)
     {
         setOwner(owner);
-        //setNumber(number);
         setInterestRate(interestRate);
         incrementCount();
         setNumber(totalAcc);
